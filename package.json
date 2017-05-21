@@ -4,6 +4,8 @@
   "description": "Ebb And Flow Pictures website",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/gulp server",
+    "build": "./node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

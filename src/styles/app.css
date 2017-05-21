@@ -4,8 +4,3 @@ $blue: #0000ff;
 body {
 	background: $white;
 }
-
-.test {
-	color: $blue;
-	transform: translateX(34px);
-}

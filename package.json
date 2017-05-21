@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/mccambridge/ebbandflow",
   "devDependencies": {
-    "gulp-babel": "^6.1.1"
+    "gulp-babel": "^6.1.1",
+    "postcss-define-function": "^0.1.1"
   },
   "dependencies": {
     "autoprefixer": "^6.2.1",

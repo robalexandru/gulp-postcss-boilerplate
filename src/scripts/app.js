@@ -4,5 +4,3 @@ const func = (someVar) => {
 	const someLongVarName = someVar + 1;
 	return 'hello!';
 };
-
-console.log(someVar);

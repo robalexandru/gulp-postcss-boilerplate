@@ -17,7 +17,7 @@ const nj       = njRender.nunjucks;
 
 const browserSync   = require('browser-sync');
 const reload        = browserSync.reload;
- 
+
 gulp.task('scripts', () => {
   return gulp.src('src/scripts/app.js')
     .pipe(webpack())
@@ -36,6 +36,7 @@ gulp.task('scripts', () => {
 
 gulp.task('styles', () => {
   const processors = [
+    require('postcss-define-function'),
     precss(),
     lost,
     autoprefixer({browsers: ['last 2 versions']})

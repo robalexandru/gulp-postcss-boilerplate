@@ -1,4 +1,75 @@
 /*styles.css*/
 @import '../../node_modules/normalize.css/normalize.css';
 
-@import 'app.css';
+$boxw: 10vw;
+$bs3: $boxw * 3;
+
+
+body {
+  height:100vh;
+}
+#box {
+  position: absolute;
+  width: $boxw;
+  height: $boxw;
+  background: red;
+  animation: 10s linear 0s infinite alternate move_box;
+  border: splid;
+  border-radius: 100%;
+}
+@keyframes move_box {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  5% {
+    top: calc(50vh - ($boxw / 2));
+    left: calc(50vw - ($boxw / 2));
+  }
+  10% {
+    top: calc(50vh - ($boxw / 2));
+    left: calc(50vw - ($boxw / 2));
+    width: $boxw;
+    border-radius: 0%;
+  }
+  15% {
+    width: $bs3;
+    left: calc(50vw - ($bs3 / 2));
+  }
+  20% {
+    width: $bs3;
+    left: calc(50vw - ($bs3 / 2));
+    border-radius: 0%;
+  }
+  30% {
+    width: $bs3;
+    left: calc(50vw - ($bs3 / 2));
+    background:green;
+  }
+  40% {
+    top: calc(50vh - ($boxw / 2));
+    width: $boxw;
+    height: $boxw;
+    left: 45vw;
+    background: green;
+  }
+  50% {
+    top: calc(50vh - ($bs3 / 2));
+    height: $bs3;
+    width: $boxw;
+    left: 45vw;
+    background: red;
+    border-radius: 0%;
+  }
+  60% {
+    width: $boxw;
+    height: $boxw;
+    top: 45vh;
+    left: 45vw;
+    border-radius: 100%;
+  }
+  100% {
+    top: calc(100vh - $boxw);
+    left: calc(100vw - $boxw);
+  }
+ }

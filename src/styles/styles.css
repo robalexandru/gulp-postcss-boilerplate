@@ -2,11 +2,10 @@
 @import '../../node_modules/normalize.css/normalize.css';
 
 $boxw: 10vw;
-$bs3: $boxw * 3;
-
 
 body {
   height:100vh;
+  background: black;
 }
 #box {
   position: absolute;
@@ -33,18 +32,21 @@ body {
     border-radius: 0%;
   }
   15% {
-    width: $bs3;
-    left: calc(50vw - ($bs3 / 2));
-  }
-  20% {
-    width: $bs3;
-    left: calc(50vw - ($bs3 / 2));
+    width: calc($boxw * 3);
+    left: calc(50vw - (($boxw * 3) / 2));
     border-radius: 0%;
   }
+  20% {
+    width: calc($boxw * 3);
+    left: calc(50vw - (($boxw * 3) / 2));
+    top: calc(50vh - ($boxw / 2 ));
+    background: red;
+  }
   30% {
-    width: $bs3;
-    left: calc(50vw - ($bs3 / 2));
+    width: calc($boxw * 3);
+    left: calc(50vw - (($boxw * 3) / 2));
     background:green;
+    top: calc(50vh - ($boxw / 2 ));
   }
   40% {
     top: calc(50vh - ($boxw / 2));
@@ -54,8 +56,8 @@ body {
     background: green;
   }
   50% {
-    top: calc(50vh - ($bs3 / 2));
-    height: $bs3;
+    top: calc(50vh - (($boxw * 3) / 2));
+    height: calc($boxw * 3);
     width: $boxw;
     left: 45vw;
     background: red;
@@ -66,10 +68,12 @@ body {
     height: $boxw;
     top: 45vh;
     left: 45vw;
-    border-radius: 100%;
   }
   100% {
     top: calc(100vh - $boxw);
     left: calc(100vw - $boxw);
   }
+ }
+ h1{
+   color: red;
  }
